@@ -1,0 +1,75 @@
+<!-- Contenidos -->
+<ion-content [fullscreen]="true">
+  <!-- Titulo Descriptivo -->
+  <ion-title size="large" class="ion-padding-top">
+    Este es el clima actual para la actividad al aire libre
+  </ion-title>
+  <!-- Banner superior -->
+  <ion-row id="bannerSuperior" class="">       
+    <ion-card>
+      <!-- class="clear" id ="sol" *ngFor="let item of items" iconos del clima / dia / Rango temperaturas-->        
+      <ion-card-header><ion-card-title>Clima Actual en la ciudad de Bogotá</ion-card-title></ion-card-header>            
+      <ion-card-content>
+        <ion-img alt="Imagen del clima" src="">
+          <ion-label class="ion-text-start ion-align-items-center">
+            <h3>Bogota</h3>
+            <p>Tipo clima</p>
+          </ion-label>
+        </ion-img>              
+        <div id="bogotaHoy">bogotaHoy</div>                                
+      </ion-card-content>                
+    </ion-card>    
+  </ion-row>
+  <!-- Banner inferior -->
+  <ion-row id="bannerInferior">
+    <!-- Clima para los proximos dias -->
+    <ion-col>
+      <ion-list-header>
+        <h3><Strong>3 Days</Strong> Forecast</h3>
+      </ion-list-header>      
+      <ion-card>              
+        <ion-card-header><ion-card-title>Clima de los próximos tres días.</ion-card-title></ion-card-header>
+        <ion-card-content>
+          <!--"clear" = sol -->
+          <ion-row>
+            <ion-card>
+              <ion-card-title id="bogotaProximosDias">bogotaProximosDias</ion-card-title>
+              <ion-item class="ion-float-left">
+                <ion-thumbnail slot="start">
+                  <ion-img [src]="" alt="Iconos del clima"></ion-img>
+                </ion-thumbnail>
+                <ion-label class="ion-text-start ion-align-items-center">
+                  <h3>Dia Semana</h3>
+                  <p>Tipo clima</p>
+                </ion-label>
+              </ion-item>
+              <ion-item class="ion-float-right ion-text-center ion-align-items-center" color="tertiary" detail="false">Rango temperaturas</ion-item> 
+            </ion-card>            
+          </ion-row>          
+        </ion-card-content>                
+      </ion-card>    
+    </ion-col>      
+    <!-- Clima de Paris Francia -->
+    <ion-col>
+      <ion-list-header>
+        <h3><Strong>Clima</Strong> colaboradores en</h3>
+      </ion-list-header>      
+      <ion-card>              
+        <ion-card-header><ion-card-title> París - Francia.</ion-card-title></ion-card-header>
+        <ion-card-content>
+          <ion-card-title id="actualParis">actualParis</ion-card-title>
+              <ion-item>
+                <ion-thumbnail slot="start">
+                  <ion-img [src]="" alt="Iconos del clima"></ion-img>
+                </ion-thumbnail>
+                <ion-label class="ion-text-start ion-align-items-center">
+                  <h3>Dia Semana</h3>
+                  <p>Tipo clima</p>
+                </ion-label>
+              </ion-item>
+              <ion-item color="tertiary" detail="false">Rango temperaturas</ion-item>                    
+        </ion-card-content>                
+      </ion-card>          
+    </ion-col>
+  </ion-row>  
+</ion-content>
